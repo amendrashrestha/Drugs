@@ -1,0 +1,140 @@
+2016-07-08 15:06:55,716 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:06:55,731 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating new index writer
+
+2016-07-08 15:06:55,732 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:07:30,208 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Changing index path tocae6f404-8750-4468-80fb-073c980c7b57
+
+2016-07-08 15:07:30,210 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:07:30,224 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating new index writer
+
+2016-07-08 15:07:30,224 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:16:00,890 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Changing index path tocdcd55ec-414b-41f8-a23c-d5ebf7573871
+
+2016-07-08 15:16:00,892 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:16:00,907 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating new index writer
+
+2016-07-08 15:16:00,907 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:18:29,373 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Changing index path toe5c258f1-75c8-4642-91a4-e3dd8807956d
+
+2016-07-08 15:18:29,375 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:18:29,391 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating new index writer
+
+2016-07-08 15:18:29,391 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:18:34,939 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Changing index path toab484395-ce83-4566-a5b0-b4bdb26f50f9
+
+2016-07-08 15:18:34,940 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:18:34,954 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating new index writer
+
+2016-07-08 15:18:34,954 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:20:18,808 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Changing index path tof2faabef-6018-4654-b9ef-c9b721aba65a
+
+2016-07-08 15:20:18,810 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:20:18,824 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating new index writer
+
+2016-07-08 15:20:18,825 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:25:30,470 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Changing index path to4980ffea-b286-4818-8f60-edad11169537
+
+2016-07-08 15:25:30,472 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:25:30,489 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating new index writer
+
+2016-07-08 15:25:30,490 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:28:30,806 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Changing index path to576fbb33-98cb-4e44-a88b-4e1076e81c95
+
+2016-07-08 15:28:30,808 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:28:30,822 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating new index writer
+
+2016-07-08 15:28:30,822 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:32:45,852 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Changing index path to0a330915-1cb8-4145-8fdb-ccd9763f9907
+
+2016-07-08 15:32:45,854 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
+2016-07-08 15:32:45,869 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating new index writer
+
+2016-07-08 15:32:45,869 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+				
+Creating directory word2vec-index
+
