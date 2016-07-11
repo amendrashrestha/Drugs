@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import model.Database;
@@ -30,12 +31,36 @@ import org.nd4j.linalg.factory.Nd4j;
 public class IOReadWrite {
 
 //    private static final Pattern UNDESIRABLES = Pattern.compile("[★(),.;!-?<>%\\*]");
-    private static final Pattern UNDESIRABLES = Pattern.compile("[,.?★*;\\]\\[\\(\\)]");
+    private static final Pattern UNDESIRABLES = Pattern.compile("[!,.?★*;\\]\\[\\(\\)\"-]");
 
-    public static String FilterPost(String text) {
+    public static String filterPost(String text) {
         text = text.toLowerCase();
-        text = Jsoup.parse(text).text();
         text = UNDESIRABLES.matcher(text).replaceAll(" ") + " ";
+        return text;
+    }
+
+    private static String removeDate(String post_remove_html) {
+        String date = "[a-zA-Z]+ [0-9]{2}, [0-9]{4}, ([01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9] [a-z]{2}";
+        Pattern hPattern = Pattern.compile(date);
+        Matcher m = hPattern.matcher(post_remove_html);
+
+        while (m.find()) {
+            post_remove_html = post_remove_html.replaceAll(date, "");
+        }
+        return post_remove_html;
+    }
+
+    public static String removeHTML(String text) {
+        text = Jsoup.parse(text).text();
+        String urlPattern = "((https?|ftp|gopher|telnet|file|Unsure|http):((//)|"
+                + "(\\\\))+[\\w\\d:#@%/;$()~_?\\+-=\\\\\\.&]*)";
+        Pattern uPattern = Pattern.compile(urlPattern, Pattern.CASE_INSENSITIVE);
+        Matcher m = uPattern.matcher(text);
+
+        while (m.find()) {
+            String urlStr = m.group();
+            text = text.replaceAll(Pattern.quote(urlStr), "").trim();
+        }
         return text;
     }
 
@@ -46,7 +71,10 @@ public class IOReadWrite {
 
         for (String post : posts) {
             try {
-                String filtered_posts = FilterPost(post);
+                String post_remove_html = removeHTML(post);
+                String post_remove_date = removeDate(post_remove_html);
+                String filtered_posts = filterPost(post_remove_date);
+
                 writeIntoFile(filtered_posts);
             } catch (IOException ex) {
                 Logger.getLogger(IOReadWrite.class.getName()).log(Level.SEVERE, null, ex);
@@ -80,7 +108,7 @@ public class IOReadWrite {
         Nd4j.ENFORCE_NUMERICAL_STABILITY = true;
 
 //        main.main.log.info("Writing word vectors to text file....");
-        SerializationUtils.saveObject(vec, new File(IOProperties.MODEL_FILEPATH + "w2v_model.ser"));
+//        SerializationUtils.saveObject(vec, new File(IOProperties.MODEL_FILEPATH + "w2v_model.ser"));
         WordVectorSerializer.writeWordVectors(vec, IOProperties.MODEL_FILEPATH + "w2v_vectors.txt");
     }
 
@@ -90,8 +118,8 @@ public class IOReadWrite {
             WordVectors wordVectors = WordVectorSerializer.
                     loadTxtVectors(new File(IOProperties.MODEL_FILEPATH + "w2v_vectors.txt"));
 
-            String word1 = "cocaine";
-            String word2 = "money";
+            String word1 = "grass";
+            String word2 = "weed";
 
             double sim = wordVectors.similarity(word1, word2);
             System.out.println("Similarity between " + word1 + " and " + word2 + " : " + sim);

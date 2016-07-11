@@ -20,10 +20,10 @@ public class main {
     static void init() throws IOException {
         File liwcCountFile = new File(IOProperties.DRUG_TEXT_FILEPATH);
 
-//        if (!liwcCountFile.exists()) {
-//            IOReadWrite.DrugPosts();
+        if (!liwcCountFile.exists()) {
+            IOReadWrite.DrugPosts();
             IOReadWrite.Word2VecModel();
-//        }
+        }
         System.out.println("Testing model......");
         IOReadWrite.TestModel();
     }
