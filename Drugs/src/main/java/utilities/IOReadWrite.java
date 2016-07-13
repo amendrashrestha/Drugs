@@ -64,7 +64,7 @@ public class IOReadWrite {
         return text;
     }
 
-    public static void DrugPosts() {
+    public static void DrugPosts(String filepath) {
         String tableName = "tbl_drugs_info_new";
 
         List<String> posts = Database.getPost(tableName);
@@ -75,23 +75,46 @@ public class IOReadWrite {
                 String post_remove_date = removeDate(post_remove_html);
                 String filtered_posts = filterPost(post_remove_date);
 
-                writeIntoFile(filtered_posts);
+                writeIntoFile(filtered_posts, filepath);
             } catch (IOException ex) {
                 Logger.getLogger(IOReadWrite.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
 
-    private static void writeIntoFile(String filtered_posts) throws IOException {
-        try (FileWriter fw = new FileWriter(IOProperties.DRUG_TEXT_FILEPATH, true)) {
+    public static void AlternativeMediaPosts(String filepath) {
+        String[] newsType = new String[]{"nordfront", "avpixlat", "exponerat",
+            "fritider", "nyheteridag", "samtiden", "aftonbladet", "DN"};
+        String tableName = "tbl_news_";
+
+        for (String single_newsType : newsType) {
+            System.out.println("*********** " + single_newsType + " ***********");
+            List<String> posts = Database.getAltMediaPost(tableName + single_newsType);
+
+            for (String post : posts) {
+                try {
+                    String post_remove_html = removeHTML(post);
+                    String post_remove_date = removeDate(post_remove_html);
+                    String filtered_posts = filterPost(post_remove_date);
+
+                    writeIntoFile(filtered_posts, filepath);
+                } catch (IOException ex) {
+                    Logger.getLogger(IOReadWrite.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
+
+    private static void writeIntoFile(String filtered_posts, String filepath) throws IOException {
+        try (FileWriter fw = new FileWriter(filepath, true)) {
             fw.write(filtered_posts + "\n");
         }
     }
 
-    public static void Word2VecModel() throws IOException {
+    public static void Word2VecModel(String filepath, String modelFilePath) throws IOException {
 
         main.main.log.info("Load & Vectorize Sentences....");
-        File file = new File(IOProperties.DRUG_TEXT_FILEPATH);
+        File file = new File(filepath);
         SentenceIterator iter = new FileSentenceIterator(file);
 
         TokenizerFactory t = new DefaultTokenizerFactory();
@@ -109,14 +132,14 @@ public class IOReadWrite {
 
 //        main.main.log.info("Writing word vectors to text file....");
 //        SerializationUtils.saveObject(vec, new File(IOProperties.MODEL_FILEPATH + "w2v_model.ser"));
-        WordVectorSerializer.writeWordVectors(vec, IOProperties.MODEL_FILEPATH + "w2v_vectors.txt");
+        WordVectorSerializer.writeWordVectors(vec, modelFilePath + "w2v_vectors.txt");
     }
 
-    public static void TestModel() {
+    public static void TestModel(String modelFilepath) {
 
         try {
             WordVectors wordVectors = WordVectorSerializer.
-                    loadTxtVectors(new File(IOProperties.MODEL_FILEPATH + "w2v_vectors.txt"));
+                    loadTxtVectors(new File(modelFilepath + "w2v_vectors.txt"));
 
             String word1 = "grass";
             String word2 = "weed";

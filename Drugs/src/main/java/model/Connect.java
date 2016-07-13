@@ -17,7 +17,7 @@ public class Connect {
         Connection conn = null;
         String unicode = "?useUnicode=yes&characterEncoding=UTF-8";
         String connect = "&autoReconnect=true&failOverReadOnly=false&maxReconnects=50";
-        String db_url = "jdbc:mysql://127.0.0.1:3306/Drugs";
+        String db_url = "jdbc:mysql://127.0.0.1:3306/AlternativeMedia";
         String db_username = "root";
         String db_password = "root86";
         

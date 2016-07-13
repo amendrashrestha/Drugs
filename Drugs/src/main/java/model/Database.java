@@ -37,5 +37,28 @@ public class Database {
         }
         return posts;
     }
+    
+    public static List<String> getAltMediaPost(String tableName) {
+        List<String> posts = new ArrayList();
+        try {
+            Connection connection = Connect.getConn();
+            String sizeQuery = "SET group_concat_max_len = 100000000000;";
+
+            String selectQuery = "SELECT News from " + tableName;
+
+            Statement statement = connection.createStatement();
+            statement.execute(sizeQuery);
+            ResultSet result = statement.executeQuery(selectQuery);
+            while (result.next()) {
+                String post = result.getString("News");
+                posts.add(post);
+            }
+        } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException | IllegalAccessException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return posts;
+    }
 
 }
