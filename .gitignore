@@ -1,0 +1,5 @@
+*.jar
+*.txt
+Data
+/Word2Vec/target/
+/Drugs/target/
