@@ -1,0 +1,14 @@
+.idea
+build/
+dist/
+__pycache__/
+.xml
+.idea
+.DS_Store
+.pyc
+*.json
+*.tsv
+*.csv
+*.png
+*.txt
+*.hdf5
