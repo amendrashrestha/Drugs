@@ -1,0 +1,15 @@
+.centered {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+#profiler-index-img {
+    margin-top: 1rem;
+}
+
+#btn-upload-file {
+    color: white;
+}

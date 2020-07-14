@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <main class="main-content col-lg-12 col-md-12 col-sm-12 p-0">
+        <p id="loading" class="centered"></p>
+        <!-- / .main-navbar -->
+        <div class="main-content-container container-fluid px-4">
+            <!-- Header Blocks -->
+            <div class="row">
+                <div class="col-lg-2 col-md-6 col-sm-12 mb-4"></div>
+                <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
+                    <div id="profiler-index-img" class="centered">
+                        <img src="{{ url_for('static', filename='img/profiler-logo-index.png') }}" alt="Profiler"/>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 mb-4"></div>
+            </div>
+            <!-- End Header Blocks -->
+
+            <!-- Users Stats -->
+            <div class="row">
+                <div class="col-lg-2 col-md-6 col-sm-12 mb-4"></div>
+                <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
+                    <div class="card card-small h-100">
+                        <div class="card-body d-flex flex-column">
+                            <form class="quick-post-form">
+                                <div class="form-group">
+                                <textarea class="form-control" name="txt-user-input"
+                                          placeholder="Words can be like X-rays if you see through them properly."></textarea>
+                                </div>
+
+                                <form id="form-upload-file" method="" enctype="multipart/form-data">
+                                    <label class="" for="file-selector">
+                                        <input id="file-selector" name="file" type="file" style="display:none">
+                                        <a id="btn-upload-file"
+                                           class="btn btn-sm btn-info">
+                                            <i class="material-icons">file_copy</i>
+                                            Upload</a></span>
+                                    </label>
+                                </form>
+
+                                <div class="form-group mb-0 centered">
+                                    <button type="submit" id="btn-profiler" class="btn btn-success">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 mb-4"></div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

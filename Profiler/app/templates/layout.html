@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js h-100" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Profiler</title>
+    <meta name="description" content="Web based tool for profiling user based on text.">
+    <link rel="apple-touch-icon" href="{{ url_for('static',filename='img/favicon.ico') }}" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" id="bootstrap-stylesheet"
+          href="{{ url_for('static',filename='css/import/bootstrap.min.css', version='1') }}" crossorigin="anonymous">
+    <link rel="stylesheet" id="extra-stylesheet"
+          href="{{ url_for('static',filename='css/import/extras.1.1.0.min.css', version='1') }}">
+    <link rel="stylesheet" id="main-stylesheet"
+          href="{{ url_for('static',filename='css/local/profiler-dashboards.min.css', version='2') }}">
+    <link rel="stylesheet" id="inhouse-stylesheet"
+          href="{{ url_for('static',filename='css/local/profiler-style.css', version='3') }}">
+
+</head>
+<body class="h-100">
+<div class="container-fluid">
+
+    <div class="row">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static',filename='js/import/jquery-3.3.1.min.js') }}"></script>
+
+    <!--Bootstrap-->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/import/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/import/popper.min.js') }}"></script>
+
+    <script type="text/javascript"
+            src="{{ url_for('static',filename='js/import/profiler-dashboards.1.1.0.min.js', version='3') }}"></script>
+    <script type="text/javascript"
+            src="{{ url_for('static',filename='js/local/profiler-style.js', version='6') }}"></script>
+</div>
+</body>
+</html>

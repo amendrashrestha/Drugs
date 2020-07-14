@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/PycharmProjects/4Chan/.idea/4Chan.iml" filepath="$USER_HOME$/PycharmProjects/4Chan/.idea/4Chan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Profiler.iml" filepath="$PROJECT_DIR$/.idea/Profiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Shards-Dashboard-Lite-1.1.0/.idea/Shards-Dashboard-Lite-1.1.0.iml" filepath="$PROJECT_DIR$/../Shards-Dashboard-Lite-1.1.0/.idea/Shards-Dashboard-Lite-1.1.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dechefr/.idea/dechefr.iml" filepath="$PROJECT_DIR$/../dechefr/.idea/dechefr.iml" />
+    </modules>
+  </component>
+</project>
